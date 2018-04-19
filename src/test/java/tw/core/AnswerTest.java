@@ -69,5 +69,5 @@ public class AnswerTest {
         String actualResult = result.getValue()[0] + "A" + result.getValue()[1] + "B";
         assertThat(actualResult, is(expectValue));
     }
-    
+
 }
