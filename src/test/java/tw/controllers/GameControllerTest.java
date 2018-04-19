@@ -44,7 +44,7 @@ public class GameControllerTest {
         correctAnswer = Answer.createAnswer("1 2 3 4");
         errorAnswer = Answer.createAnswer("1 2 5 6");
 
-        when(mockGenerator.generate()).thenReturn(correctAnswer);
+//        when(mockGenerator.generate()).thenReturn(correctAnswer);
         gameController = new GameController(game, mockGameView);
     }
 
@@ -70,6 +70,7 @@ public class GameControllerTest {
 
         //then
         verify(mockGameView).showGuessResult(any());
+        System.out.println(mockGenerator.generate());
         verify(mockGameView).showGuessHistory(anyList());
         verify(mockGameView).showGameStatus(anyString());
     }
