@@ -8,8 +8,8 @@ public class Record {
 
     }
 
-    public int[] getValue() {
-        return value;
+    public String getValue() {
+        return String.format("%1$sA%2$sB", value[0], value[1]);
     }
 
     public void increaseCurrentNum() {

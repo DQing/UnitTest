@@ -29,8 +29,7 @@ public class Game {
     }
 
     public GuessResult guess(Answer inputAnswer) {
-        final int[] existRecord = actualAnswer.check(inputAnswer).getValue();
-        String result = String.format("%1$sA%2$sB", existRecord[0], existRecord[1]);
+        String result = actualAnswer.check(inputAnswer).getValue();
         GuessResult guessResult = new GuessResult(result, inputAnswer);
         guessResults.add(guessResult);
         return guessResult;
