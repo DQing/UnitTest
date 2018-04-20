@@ -66,8 +66,7 @@ public class AnswerTest {
         Record result = actualAnswer.check(inputAnswer);
 
         //then
-        String actualResult = result.getValue()[0] + "A" + result.getValue()[1] + "B";
-        assertThat(actualResult, is(expectValue));
+        assertThat(result.getValue(), is(expectValue));
     }
 
 }
